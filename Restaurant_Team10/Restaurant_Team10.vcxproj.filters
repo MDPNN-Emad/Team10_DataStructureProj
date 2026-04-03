@@ -47,5 +47,11 @@
     <ClInclude Include="QueueADT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Scooter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="random_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
