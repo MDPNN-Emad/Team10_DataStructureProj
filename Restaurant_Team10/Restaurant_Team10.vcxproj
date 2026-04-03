@@ -128,6 +128,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Restuarant.cpp" />
+    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h" />
@@ -139,9 +141,11 @@
     <ClInclude Include="priQueue.h" />
     <ClInclude Include="QueueADT.h" />
     <ClInclude Include="random_generator.h" />
+    <ClInclude Include="Restuarant.h" />
     <ClInclude Include="Scooter.h" />
     <ClInclude Include="StackADT.h" />
     <ClInclude Include="Table.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
