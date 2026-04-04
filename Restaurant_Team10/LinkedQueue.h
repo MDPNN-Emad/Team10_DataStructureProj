@@ -44,6 +44,7 @@ Single Node Case:
 
 #include "Node.h"
 #include "QueueADT.h"
+#include <iostream>
 
 template <typename T>
 class LinkedQueue:public QueueADT<T>
@@ -56,7 +57,10 @@ public :
 	bool isEmpty() const ;
 	bool enqueue(const T& newEntry);
 	bool dequeue(T& frntEntry);  
-	bool peek(T& frntEntry)  const;	
+	bool peek(T& frntEntry)  const;
+	//modified the class: added two functions: printQueue and getCount
+	void printQueue();
+	int getCount();
 	~LinkedQueue();
 };
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -171,20 +175,20 @@ LinkedQueue<T>::~LinkedQueue()
 {
 	//Note that the cout statements here is just for learning purpose
 	//They should be normally removed from the destructor
-	cout<<"\nStarting LinkedQueue destructor...";
-	cout<<"\nFreeing all nodes in the queue...";
+	//cout<<"\nStarting LinkedQueue destructor...";
+	//cout<<"\nFreeing all nodes in the queue...";
 
 	//Free all nodes in the queue
 	T temp;
 	while(dequeue(temp));
 	
-	cout<<"\n Is LinkedQueue Empty now?? ==> "<<boolalpha<<isEmpty();
-	cout<<"\nEnding LinkedQueue destructor..."<<endl;
+	//cout<<"\n Is LinkedQueue Empty now?? ==> "<<boolalpha<<isEmpty();
+	//cout<<"\nEnding LinkedQueue destructor..."<<endl;
 }
 
 // get count for the queue
 template <typename T>
-int getCount() {
+int LinkedQueue<T>::getCount() {
 	int count = 0;
 	Node<T>* current = frontPtr;
 	while (current) {  // while current is not null = similar to while(current != nullptr)
@@ -196,7 +200,7 @@ int getCount() {
 
 //print the queue
 template <typename T>
-void printQueue() {
+void LinkedQueue<T>::printQueue() {
 	if (isEmpty()) {
 		cout << "Queue is empty." << endl;
 		return;

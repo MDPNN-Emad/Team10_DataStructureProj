@@ -3,9 +3,13 @@
 
 #include <iostream>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+#include "Restuarant.h"
+
+int main() {
+    Restaurant* pRest = new Restaurant();
+    pRest->randomSimulation();
+    delete pRest;
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

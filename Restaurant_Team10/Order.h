@@ -116,7 +116,7 @@ public:
     void set_finish_time(int time) { finish_time = time; }
 
     //print func
-    void print()  {
+    void print() const  {
         cout << "[" << type << " " << id << "]";
         if (type == "OT") {
             cout << " Size:" << size << " Price:" << price;

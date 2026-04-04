@@ -1,5 +1,6 @@
 #pragma once
 #include "priNode.h"
+#include <iostream>
 
 
 //This class impelements the priority queue as a sorted list (Linked List)
@@ -71,9 +72,12 @@ public:
 
         priNode<T>* current = head;
         while (current) {
-			cout << "Data: " << current->getItem() << endl; // with priority, add: << ", Priority: " << current->getPri() 
+			int pri; //created a variable to store the priority, getItem requires a parameter to store in it
+			T item = current->getItem(pri); // get the item and its priority
+            cout<<item <<" "; //cout << "Data: " << current->getItem(pri) << ", Priority:" << pri<<  endl;
             current = current->getNext();
         }
+        cout << endl;
 	}
 	// get count of items in the queue
     int getCount() const {

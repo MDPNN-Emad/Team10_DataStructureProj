@@ -69,11 +69,26 @@ public:
         return (current_order != nullptr && remaining_dishes <= 0);
     }
 
-    void print() {
+    void print() const{
         cout << "Chef " << id << " (" << specialization << ")";
         if (!is_available) {
             cout << " cooking order " << current_order->get_id();
         }
+    }
+
+	//overloading the << operator for easy printing of chef details
+
+    friend ostream& operator<<(ostream& os, const Chef* chef) {
+        if (chef) {
+            os << "Chef " << chef->id << " (" << chef->specialization << ")";
+            if (!chef->is_available && chef->current_order) {
+                os << " cooking order " << chef->current_order->get_id();
+            }
+        }
+        else {
+            os << "Chef(null)";
+        }
+        return os;
     }
 };
 

@@ -119,13 +119,12 @@ public:
     // Friend operator<< to access members
     friend ostream& operator<<(ostream& os, const Table* table) {
         if (table) {
-            os << "Table(ID= " << table->id
-                << ", Cap= " << table->capacity
-                << ", Free= " << table->getFreeSeats()
-                << ", OccupiedUntil= " << table->occupiedUntil << ")";
+            os << "[T" << table->id
+                << ", " << table->capacity
+                << ", " << table->getFreeSeats() << "]";
         }
         else {
-            os << "Table not found!";
+            os << "[null]";
         }
         return os;
     }

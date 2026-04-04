@@ -33,7 +33,7 @@ public:
     bool getInMaintenance() const { return inMaintenance; }
     int getMaintenanceRemaining() const { return maintenanceRemaining; }
     int getOrdersServed() const { return ordersServed; }
-    bool isAvailable() const { return isAvailable && !inMaintenance; }
+    bool getIsAvailable() const { return isAvailable && !inMaintenance; }
 
     // Setters / modifiers
     void addDistance(int distance) {
